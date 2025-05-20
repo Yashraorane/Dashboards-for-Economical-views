@@ -1,12 +1,83 @@
-# React + Vite
+# 🌍 Country Data Dashboard – React + Vite + Tailwind + amCharts5
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an interactive dashboard for visualizing country data, built with React, Vite, Tailwind CSS, and amCharts5.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📊 Features
 
-## Expanding the ESLint configuration
+- Fetches real-time country data from the REST Countries API
+- Multiple chart types: Bar, Line, Pie (via amCharts5)
+- Filter countries by name
+- Select metric: Population or GDP
+- Responsive, mobile-friendly UI (Tailwind CSS)
+- Dockerized for easy deployment
+- Graceful loading and error handling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Folder Structure
+
+```
+src/
+├── api/           # API call logic (fetchCountryData)
+├── components/    # Reusable UI components (Chart, Filters, Selectors)
+├── pages/         # Dashboard logic and layout
+├── App.jsx        # App entry point
+├── main.jsx       # React bootstrap
+├── index.css      # Tailwind base styles
+public/
+Dockerfile
+vite.config.js
+```
+
+---
+
+## 🧰 Tech Stack
+
+- [React](https://reactjs.org)
+- [Vite](https://vitejs.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [amCharts 5](https://www.amcharts.com/docs/v5/)
+- [REST Countries API](https://restcountries.com/)
+- [Docker](https://www.docker.com/)
+
+---
+
+## 🧪 Getting Started Locally
+
+```bash
+git clone https://github.com/Yashraorane/Dashboards-for-Economical-views.git
+cd Dashboards-for-Economical-views
+npm install
+npm run dev
+```
+
+### 🏗️ Build for Production
+
+```bash
+npm run build
+npm install -g serve
+serve -s dist
+```
+
+### 🐳 Docker Commands
+
+```bash
+# Build Docker image
+docker build -t frontend-test-app .
+
+# Run container on port 3000
+docker run -p 3000:3000 frontend-test-app
+```
+
+---
+
+## 🧠 To-Do / Improvements
+
+- Add region filter (Asia, Europe, etc.)
+- Integrate real GDP via World Bank API
+- Improve accessibility (ARIA labels)
+- Add unit tests with Vitest or React Testing Library
+
+---
