@@ -1,0 +1,6 @@
+[
+  { "country": "India", "population": 1400000000, "gdp": 3300000000000 },
+  { "country": "USA", "population": 331000000, "gdp": 25000000000000 },
+  { "country": "Brazil", "population": 213000000, "gdp": 1800000000000 },
+  { "country": "Germany", "population": 83000000, "gdp": 4000000000000 }
+]
